@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Wallet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/slyes.css">
+    <link rel="icon" type="image/png" href="Image/wallet.png"> 
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="Image/menu.png" alt="Smart Wallet Icon" class="navbar-icon">
+                SMART WALLET
+            </a>
+            <div class="d-flex">
+                <button class="btn btn-link text-white">
+                    <div class="notification-icon">
+                        <img src="Image/notification-bell.png" alt="Notification Bell">
+                    </div>
+                </button>
+                <button class="btn btn-link text-white">
+                    <div class="profile-icon">
+                        <img src="Image/user.png" alt="User Profile">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ปุ่มการตั้งค่าและดูรายการ -->
+    <div class="container button-container">
+        <button class="setting-btn" onclick="window.location.href='setting.html'">
+            <img src="Image/cogwheel.png" alt="Settings Icon"> การตั้งค่า
+        </button>
+        <button class="view-list-btn" onclick="window.location.href='list.html'">
+            <img src="Image/money.png" alt="View List Icon"> ดูรายการ
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="main-content">
+            <button class="custom-btn">
+                <img src="Image/edit.png" alt="Edit Icon"> ปรับแต่ง
+            </button>
+            <div class="row-item">
+                <span>
+                    <img src="Image/money.png" alt="Money Icon" class="about-icon"> เงินสด
+                </span>
+                <div class="amount-and-dots">
+                    <span class="amount">0.00 บาท</span>
+                    <div class="dots">
+                        <img src="Image/dots.png" alt="Dots Icon">
+                    </div>
+                </div>
+            </div>
+            <div class="row-item">
+                <span>
+                    <img src="Image/bank.png" alt="Money Icon" class="about-icon"> บัญชีธนาคาร
+                </span>
+                <div class="amount-and-dots">
+                    <span class="amount">0.00 บาท</span>
+                    <div class="dots">
+                        <img src="Image/dots.png" alt="Dots Icon">
+                    </div>
+                </div>
+            </div>
+            <div class="row-item">
+                <span>
+                    <img src="Image/money-bag.png" alt="Money Icon" class="about-icon"> ค้างรับ
+                </span>
+                <div class="amount-and-dots">
+                    <span class="amount">0.00 บาท</span>
+                    <div class="dots">
+                        <img src="Image/dots.png" alt="Dots Icon">
+                    </div>
+                </div>
+            </div>
+            <div class="row-item">
+                <span>
+                    <img src="Image/money-bag (1).png" alt="Money Icon" class="about-icon"> หนี้สิน
+                </span>
+                <div class="amount-and-dots">
+                    <span class="amount">0.00 บาท</span>
+                    <div class="dots">
+                        <img src="Image/dots.png" alt="Dots Icon">
+                    </div>
+                </div>
+            </div>
+            <div class="row-item">
+                <span>
+                    <img src="Image/atm-card.png" alt="Money Icon" class="about-icon"> บัตรเครดิต
+                </span>
+                <div class="amount-and-dots">
+                    <span class="amount">0.00 บาท</span>
+                    <div class="dots">
+                        <img src="Image/dots.png" alt="Dots Icon">
+                    </div>
+                </div>
+            </div>
+            <div class="total-row">
+                <span>รวม</span>
+                <span>0.00 บาท</span>
+            </div>
+        </div>
+
+        <!-- เพิ่มกรอบใหม่ที่ด้านล่างและแบ่งเป็นสองฝั่ง -->
+        <div class="double-content mt-4">
+            <!-- กรอบฝั่งซ้าย -->
+            <div class="main-content">
+                <div class="label-container">
+                    <div class="today-label">วันนี้</div>
+                    <button class="custom-btn">
+                        <img src="Image/edit.png" alt="Edit Icon"> ปรับแต่ง
+                    </button>
+                </div>
+                <div class="date-label">18 ก.พ. 2025</div>
+                <div class="row-item1">
+                    <span>รายรับ</span>
+                    <div class="amount-and-dots">
+                        <span class="amount">0.00 บาท</span>
+
+                    </div>
+                </div>
+                <div class="row-item2">
+                    <span>รายจ่าย</span>
+                    <div class="amount-and-dots">
+                        <span class="amount">0.00 บาท</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- กรอบฝั่งขวา -->
+            <div class="main-content">
+                <div class="label-container">
+                    <div class="month-label">เดือนนี้</div>
+                    <button class="custom-btn">
+                        <img src="Image/edit.png" alt="Edit Icon"> ปรับแต่ง
+                    </button>
+                </div>
+                <div class="date-label">ก.พ. 2025</div>
+                <div class="row-item1">
+                    <span>รายรับ</span>
+                    <div class="amount-and-dots">
+                        <span class="amount">0.00 บาท</span>
+
+                    </div>
+                </div>
+                <div class="row-item2">
+                    <span>รายจ่าย</span>
+                    <div class="amount-and-dots">
+                        <span class="amount">0.00 บาท</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="calendar-container">
+        <div class="calendar-header">กุมภาพันธ์ 2025</div>
+
+        <!-- Weekdays -->
+        <div class="weekdays">
+            <div class="weekday">อา.</div>
+            <div class="weekday">จ.</div>
+            <div class="weekday">อ.</div>
+            <div class="weekday">พ.</div>
+            <div class="weekday">พฤ.</div>
+            <div class="weekday">ศ.</div>
+            <div class="weekday">ส.</div>
+        </div>
+
+        <!-- Days -->
+        <div class="days">
+            <!-- Empty spaces before the first day of February -->
+            <div class="day day-empty"></div>
+            <div class="day day-empty"></div>
+            <div class="day day-empty"></div>
+            <div class="day day-empty"></div>
+            <div class="day day-empty"></div>
+
+            <!-- Days of February -->
+            <div class="day">
+                <div class="day-number">1</div>
+            </div>
+            <div class="day">
+                <div class="day-number">2</div>
+            </div>
+            <div class="day">
+                <div class="day-number">3</div>
+            </div>
+            <div class="day">
+                <div class="day-number">4</div>
+            </div>
+            <div class="day">
+                <div class="day-number">5</div>
+            </div>
+            <div class="day">
+                <div class="day-number">6</div>
+            </div>
+            <div class="day">
+                <div class="day-number">7</div>
+            </div>
+            <div class="day">
+                <div class="day-number">8</div>
+            </div>
+            <div class="day">
+                <div class="day-number">9</div>
+            </div>
+            <div class="day">
+                <div class="day-number">10</div>
+            </div>
+            <div class="day">
+                <div class="day-number">11</div>
+            </div>
+            <div class="day">
+                <div class="day-number">12</div>
+            </div>
+            <div class="day">
+                <div class="day-number">13</div>
+            </div>
+            <div class="day">
+                <div class="day-number">14</div>
+            </div>
+            <div class="day">
+                <div class="day-number">15</div>
+            </div>
+            <div class="day">
+                <div class="day-number">16</div>
+            </div>
+            <div class="day">
+                <div class="day-number">17</div>
+            </div>
+            <div class="day">
+                <div class="day-number">18</div>
+            </div>
+            <div class="day">
+                <div class="day-number">19</div>
+            </div>
+            <div class="day">
+                <div class="day-number">20</div>
+            </div>
+            <div class="day">
+                <div class="day-number">21</div>
+            </div>
+            <div class="day">
+                <div class="day-number">22</div>
+            </div>
+            <div class="day">
+                <div class="day-number">23</div>
+            </div>
+            <div class="day">
+                <div class="day-number">24</div>
+            </div>
+            <div class="day">
+                <div class="day-number">25</div>
+            </div>
+            <div class="day">
+                <div class="day-number">26</div>
+            </div>
+            <div class="day">
+                <div class="day-number">27</div>
+            </div>
+            <div class="day">
+                <div class="day-number">28</div>
+            </div>
+            <div class="day">
+                <div class="day-number">29</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content of your page -->
+    <div class="container" style="padding-bottom: 70px;">
+        <h1> </h1>
+        <p> </p>
+    </div>
+
+    <!-- Bottom navigation bar -->
+    <div class="navbar-bottom">
+        <!-- Left: Home -->
+        <div class="nav-item">
+            <a href="#">
+                <img src="Image/home-button.png" alt="Home">
+
+            </a>
+        </div>
+
+        <!-- Center: Add Button -->
+        <div class="nav-item center">
+            <a href="#">
+                <!-- ไอคอนเครื่องหมายบวกหรือรูปภาพสามารถใส่ที่นี่ -->
+                <img src="Image/add.png" alt="Add">
+            </a>
+        </div>
+
+        <!-- Right: Summary -->
+        <div class="nav-item">
+            <a href="#">
+                <img src="Image/contract.png" alt="Summary">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

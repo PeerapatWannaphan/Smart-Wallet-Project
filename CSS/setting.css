@@ -1,0 +1,225 @@
+/* กำหนดสีพื้นหลังฟ้าสำหรับ Navbar */
+.navbar {
+    background-color: #0D92F4;  /* สีฟ้าที่ต้องการ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 20px;
+}
+
+/* กำหนดกรอบวงกลมที่มุมซ้าย */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    box-shadow: none; /* ลบเงาออก */
+    border: none; /* ลบเส้นขอบออก */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px; /* ระยะห่างจาก navbar-brand */
+}
+
+/* ขนาดของไอคอนในวงกลม */
+.navbar-circle img {
+    width: 30px;
+    height: 30px;
+}
+
+/* ปรับการจัดตำแหน่งของ navbar-brand ให้อยู่ตรงกลาง */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* ปุ่ม notification และ user profile */
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.d-flex button {
+    background: transparent;
+    border: none;
+    margin-left: 10px;
+}
+
+.notification-icon img,
+.profile-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* กำหนดกรอบแบบยาว และจัดให้กรอบเรียงกันในแนวตั้ง */
+.container {
+    display: flex;
+    flex-direction: column;  /* เปลี่ยนเป็น column เพื่อให้กรอบเรียงในแนวตั้ง */
+    gap: 10px; /* ระยะห่างระหว่างกรอบ */
+    padding: 20px;
+}
+
+/* กรอบที่ต้องการ */
+.rectangle-box {
+    width: 100%;  /* ทำให้กรอบยาวเต็มความกว้าง */
+    height: 150px; /* ปรับความสูงของกรอบ */
+    background-color: #ffffff;
+    border-radius: 15px; /* ขอบโค้งมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* เนื้อหาภายในกรอบ */
+.rectangle-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; /* จัดตำแหน่งในกรอบ */
+}
+
+/* ข้อความด้านซ้าย */
+.text-left {
+    text-align: left;
+}
+
+.text-left .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.text-left .description {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* ไอคอนด้านขวา */
+.icon-right {
+    display: flex;
+    justify-content: flex-end; /* จัดตำแหน่งไอคอนไปทางขวา */
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+}
+
+/* ปรับเสียง */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.rectangle-box {
+    width: 100%;  /* ทำให้กรอบยาวเต็มความกว้าง */
+    height: 150px; /* ปรับความสูงของกรอบ */
+    background-color: #ffffff;
+    border-radius: 15px; /* ขอบโค้งมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* จัดเรียงไอเทมในแนวตั้ง */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* เพิ่มการเปลี่ยนแปลงเมื่อเอาเมาส์ไปชี้ */
+}
+
+.rectangle-box:hover {
+    background-color: #f0f8ff; /* เปลี่ยนเป็นสีฟ้าอ่อนเมื่อเอาเมาส์ไปชี้ */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อเอาเมาส์ไปชี้ */
+}
+
+.rectangle-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-grow: 1; /* ให้พื้นที่กรอบนี้ขยาย */
+}
+
+
+.text-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.text-left .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.text-left .description {
+    font-size: 1rem;
+    color: #666;
+}
+
+.icon-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+}
+
+/* ตัวควบคุมเสียง (สไลเดอร์) */
+.sound-control {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume-slider {
+    width: 90%; /* กำหนดความยาวของสไลเดอร์ */
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+    margin-right: 10px; /* ระยะห่างระหว่างสไลเดอร์และเปอร์เซ็นต์ */
+}
+
+.volume-slider:hover {
+    background: #0D92F4;  /* สีที่แสดงตอน hover */
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0D92F4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0D92F4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* เปอร์เซ็นต์ */
+#volume-percent {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+

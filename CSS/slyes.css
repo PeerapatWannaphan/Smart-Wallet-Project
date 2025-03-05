@@ -1,0 +1,466 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 20px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: skyblue;
+}
+
+.navbar-toggler-icon {
+    font-size: 1rem;
+}
+
+.notification-icon img,
+.profile-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.setting-btn,
+.view-list-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.setting-btn:hover {
+    background-color: #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.view-list-btn {
+    background-color: #a8e6a1;
+}
+
+.view-list-btn:hover {
+    background-color: #81c784;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.setting-btn img,
+.view-list-btn img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* กรอบหลัก (ตั้งค่าให้มีการเรียงในแนวตั้ง) */
+.main-content {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* กรอบย่อยที่ปรับให้มีขนาดเล็กลง */
+.row-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: skyblue;
+    padding: 8px;
+    /* ลดขนาด padding */
+    border-radius: 10px;
+    margin-bottom: 8px;
+    /* ลดระยะห่าง */
+}
+
+.row-item1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A1DD70;
+    padding: 8px;
+    /* ลดขนาด padding */
+    border-radius: 10px;
+    margin-bottom: 8px;
+    /* ลดระยะห่าง */
+    height: 60px;
+    /* เพิ่มความสูงของกรอบ */
+}
+
+.row-item2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FDAB9E;
+    padding: 8px;
+    /* ลดขนาด padding */
+    border-radius: 10px;
+    margin-bottom: 8px;
+    /* ลดระยะห่าง */
+    height: 60px;
+    /* เพิ่มความสูงของกรอบ */
+}
+
+.row-item span {
+    font-size: 0.9rem;
+    /* ลดขนาดฟอนต์ */
+}
+
+.row-item .amount {
+    font-weight: bold;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+}
+
+.row-item .amount-and-dots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* กรอบใหม่ที่แบ่งสองฝั่ง */
+.double-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.double-content .main-content {
+    flex: 1;
+    padding: 10px;
+}
+
+/* ปรับแต่งปุ่มปรับแต่งให้เหมือนเดิม */
+.custom-btn {
+    display: flex;
+    align-items: center;
+    background-color: #0D92F4;
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* เพิ่มเงา */
+    transition: all 0.3s ease;
+    align-self: flex-end;
+    margin-left: auto;
+    border: none;
+    /* เอาขอบออก */
+}
+
+.custom-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* เพิ่มเงาเมื่อ hover */
+}
+
+.custom-btn img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.custom-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.custom-btn img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* ใช้ flex เพื่อให้ "วันนี้" อยู่ในระดับเดียวกับปุ่ม */
+.label-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* จัดให้อยู่ในระดับเดียวกัน */
+}
+
+.today-label,
+.month-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    /* เปลี่ยนสีเป็นดำ */
+    margin-bottom: 5px;
+    /* เพิ่มระยะห่างจากด้านบน */
+}
+
+/* เพิ่มวันที่ในกรอบ (ด้านบนของกรอบรายรับและยอดคงเหลือ) */
+.date-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 5px;
+    text-align: left;
+    /* เปลี่ยนให้วันที่อยู่ด้านซ้าย */
+}
+
+.dots img {
+    width: 15px;
+    /* กำหนดขนาดความกว้างของไอคอน */
+    height: 15px;
+    /* กำหนดขนาดความสูงของไอคอน */
+}
+
+.about-icon {
+    width: 25px;
+    /* เพิ่มขนาดไอคอนให้ใหญ่ขึ้น */
+    height: 25px;
+    margin-right: 10px;
+    /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
+    border-radius: 8px;
+    /* ทำให้มุมโค้งนิดหน่อย */
+    padding: 5px;
+    /* เพิ่มระยะห่างภายในกรอบ */
+    background-color: white;
+    /* ทำให้กรอบเป็นสีขาว */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    /* เพิ่มเงาให้กับกรอบ */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.calendar-container {
+    width: 100%;
+    /* ทำให้กรอบมีความกว้างเต็มที่ */
+    max-width: 1300px;
+    /* เพิ่มความกว้างสูงสุดเป็น 1200px */
+    margin: 30px auto;
+    /* เพิ่มระยะห่างระหว่างกรอบปฏิทินกับขอบหน้าจอ */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงา */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* เพิ่มระยะห่างระหว่างส่วนต่างๆ ภายในกรอบ */
+}
+
+.calendar-header {
+    text-align: left;
+    /* เปลี่ยนให้ชื่อเดือนอยู่ด้านซ้าย */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weekday {
+    width: 13%;
+    text-align: center;
+    color: #333;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.day {
+    width: 13%;
+    height: 90px;
+    /* เพิ่มความสูงของแต่ละกรอบวัน */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    border-radius: 10px;
+    /* ขอบโค้ง */
+    margin-bottom: 15px;
+    /* เพิ่มระยะห่างระหว่างกรอบวัน */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    /* ใช้เพื่อจัดตำแหน่งตัวเลขวันที่ */
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+.day-number {
+    position: absolute;
+    /* ใช้ตำแหน่ง absolute */
+    top: 5px;
+    /* ตั้งตำแหน่งให้ไปด้านบน */
+    left: 5px;
+    /* ตั้งตำแหน่งให้ไปด้านซ้าย */
+    font-size: 1rem;
+    /* ลดขนาดตัวเลขในวัน */
+    color: #333;
+    font-weight: bold;
+}
+
+.day-empty {
+    background-color: transparent;
+    cursor: default;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    /* จัดปุ่ม Home และ Summary ที่ขอบซ้ายและขวา */
+    align-items: center;
+    /* จัดตำแหน่งปุ่มให้ตรงกลางแนวตั้ง */
+    padding: 10px 20px;
+    margin-top: 10px;
+    /* เพิ่มระยะห่างด้านบนเพื่อขยับแถบลง */
+}
+
+.navbar-bottom .nav-item {
+    text-align: center;
+    width: 33.33%;
+    /* กำหนดความกว้างให้เท่ากัน */
+}
+
+/* ขยายขนาดของปุ่ม Home และ Summary และทำให้ตัวหนา */
+.navbar-bottom .nav-item a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    /* ทำให้ตัวหนาขึ้น */
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.navbar-bottom .nav-item a:hover {
+    color: #0D92F4;
+}
+
+.navbar-bottom .nav-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+/* กรอบปุ่มกลาง (+) เอากรอบเงาสีฟ้าออก */
+.navbar-bottom .nav-item.center {
+    display: flex;
+    /* ใช้ flex เพื่อจัดตำแหน่งไอคอนกลาง */
+    justify-content: center;
+    /* จัดตำแหน่งไอคอนให้ตรงกลางแนวนอน */
+    align-items: center;
+    /* จัดตำแหน่งไอคอนให้ตรงกลางแนวตั้ง */
+}
+
+.navbar-bottom .nav-item.center a {
+    font-size: 3rem;
+    /* ขยายขนาดของปุ่ม */
+    border-radius: 50%;
+    color: white;
+    padding: 20px;
+    width: 80px;
+    /* กำหนดขนาดให้ใหญ่ขึ้น */
+    height: 80px;
+    /* กำหนดขนาดให้ใหญ่ขึ้น */
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    /* จัดตำแหน่งไอคอนให้ตรงกลางแนวนอน */
+    align-items: center;
+    /* จัดตำแหน่งไอคอนให้ตรงกลางแนวตั้ง */
+}
+
+.navbar-bottom .nav-item.center a:hover {
+    background-color: skyblue;
+}
+
+.navbar {
+    background-color: white;
+    /* สีพื้นหลังของ navbar */
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    /* ขนาดฟอนต์ */
+    font-weight: bold;
+    /* ตัวหนา */
+    color: skyblue;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icon {
+    width: 30px;
+    /* ขนาดของไอคอน */
+    height: 30px;
+    margin-right: 10px;
+    /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+/* ปุ่มไอคอน */
+.notification-icon img,
+.profile-icon img {
+    width: 30px;
+    height: 30px;
+}

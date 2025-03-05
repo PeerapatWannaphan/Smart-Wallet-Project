@@ -1,0 +1,110 @@
+/* กำหนดสีพื้นหลังฟ้าสำหรับ Navbar */
+.navbar {
+    background-color: #0D92F4;  /* สีฟ้าที่ต้องการ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 20px;
+}
+
+/* กรอบใหม่ด้านบนที่อยู่ติดกับ Navbar */
+.top-box {
+    width: 100%;  /* กำหนดให้กรอบมีความกว้างเต็มที่ */
+    height: 100px; /* ปรับความสูงของกรอบ */
+    background-color: #ffffff;  /* สีพื้นหลัง */
+    border-radius: 15px;  /* ขอบโค้งมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* เพิ่มเงาให้กรอบ */
+    margin-top: 10px;  /* ระยะห่างจาก Navbar */
+    padding: 20px;  /* ระยะห่างภายในกรอบ */
+    display: flex;  /* ใช้ flexbox เพื่อจัดกรอบในแนวนอน */
+    gap: 20px;  /* ระยะห่างระหว่างกรอบ */
+    justify-content: flex-start; /* จัดกรอบให้ชิดซ้าย */
+}
+
+/* กรอบภายใน */
+.inner-box {
+    width: 7%; /* กำหนดความกว้างของกรอบ */
+    height: 80%; /* ความสูงของกรอบภายใน */
+    background-color: #f5f5f5; /* สีพื้นหลังของกรอบภายใน */
+    border-radius: 30px; /* ขอบโค้งมนของกรอบภายใน */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาให้กรอบภายใน */
+    display: flex;
+    align-items: center; /* จัดตำแหน่งไอคอนและข้อความให้อยู่กลางแนวตั้ง */
+    padding-left: 20px; /* ระยะห่างจากขอบซ้าย */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีและเงา */
+}
+
+/* เมื่อเอาเมาส์ไปชี้ที่กรอบ */
+.inner-box:hover {
+    background-color: #0D92F4; /* เปลี่ยนเป็นสีฟ้า */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้กรอบเมื่อ hover */
+}
+
+/* ตัวอักษรในกรอบภายใน */
+.inner-box p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    display: inline;  /* ให้ข้อความอยู่ข้างๆ ไอคอน */
+    text-align: left;  /* จัดข้อความให้เริ่มต้นจากซ้าย */
+}
+
+/* กำหนดขนาดไอคอนในกรอบ */
+.inner-box .icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;  /* ระยะห่างระหว่างไอคอนและข้อความ */
+}
+
+/* กรอบหลักที่บรรจุกระบวนการเรียงกรอบ */
+.container {
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงกรอบในแนวนอน */
+    gap: 20px; /* ระยะห่างระหว่างกรอบ */
+    justify-content: flex-start; /* จัดกรอบให้ชิดซ้าย */
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+}
+
+/* กรอบภายในที่มีข้อความและไอคอน */
+.rectangle-box1 {
+    width: 100%;  /* กำหนดความกว้างของกรอบ */
+    background-color: #ffffff;
+    border-radius: 15px; /* ขอบโค้งมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาให้กรอบ */
+    padding: 20px; /* ระยะห่างภายในกรอบ */
+    transition: none;  /* ลบการเปลี่ยนแปลงเมื่อชี้ */
+}
+
+/* ส่วนของเนื้อหาภายในกรอบ */
+.rectangle-content {
+    display: flex;
+    justify-content: space-between; /* จัดกรอบข้อความและไอคอนให้ห่างกัน */
+    align-items: center; /* จัดตำแหน่งไอคอนและข้อความให้อยู่ในแนวเดียวกัน */
+}
+
+/* ข้อความด้านซ้าย */
+.text-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.description {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* ไอคอนด้านขวา */
+.icon-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
