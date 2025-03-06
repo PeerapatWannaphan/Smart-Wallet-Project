@@ -10,9 +10,8 @@
     width: 100%;  /* กำหนดให้กรอบมีความกว้างเต็มที่ */
     height: 100px; /* ปรับความสูงของกรอบ */
     background-color: #ffffff;  /* สีพื้นหลัง */
-    border-radius: 15px;  /* ขอบโค้งมน */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* เพิ่มเงาให้กรอบ */
-    margin-top: 10px;  /* ระยะห่างจาก Navbar */
+    margin-top: 0px;  /* ระยะห่างจาก Navbar */
     padding: 20px;  /* ระยะห่างภายในกรอบ */
     display: flex;  /* ใช้ flexbox เพื่อจัดกรอบในแนวนอน */
     gap: 20px;  /* ระยะห่างระหว่างกรอบ */
@@ -21,15 +20,19 @@
 
 /* กรอบภายใน */
 .inner-box {
-    width: 7%; /* กำหนดความกว้างของกรอบ */
+    min-width: 8.5%; /* กำหนดความกว้างขั้นต่ำของกรอบ */
+    max-width: 100%; /* ความกว้างสูงสุดของกรอบ */
     height: 80%; /* ความสูงของกรอบภายใน */
     background-color: #f5f5f5; /* สีพื้นหลังของกรอบภายใน */
     border-radius: 30px; /* ขอบโค้งมนของกรอบภายใน */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาให้กรอบภายใน */
     display: flex;
     align-items: center; /* จัดตำแหน่งไอคอนและข้อความให้อยู่กลางแนวตั้ง */
+    justify-content: center; /* จัดตำแหน่งไอคอนและข้อความให้ตรงกลางแนวนอน */
     padding-left: 20px; /* ระยะห่างจากขอบซ้าย */
+    padding-right: 10px; /* ระยะห่างจากขอบขวา */
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีและเงา */
+    white-space: nowrap; /* ป้องกันไม่ให้ข้อความหักบรรทัด */
 }
 
 /* เมื่อเอาเมาส์ไปชี้ที่กรอบ */
@@ -40,11 +43,13 @@
 
 /* ตัวอักษรในกรอบภายใน */
 .inner-box p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #333;
     margin: 0;
     display: inline;  /* ให้ข้อความอยู่ข้างๆ ไอคอน */
     text-align: left;  /* จัดข้อความให้เริ่มต้นจากซ้าย */
+    display: flex;
+    align-items: center; /* จัดข้อความให้ตรงกลางแนวตั้ง */
 }
 
 /* กำหนดขนาดไอคอนในกรอบ */
@@ -53,6 +58,7 @@
     height: 25px;
     margin-right: 10px;  /* ระยะห่างระหว่างไอคอนและข้อความ */
 }
+
 
 /* กรอบหลักที่บรรจุกระบวนการเรียงกรอบ */
 .container {
@@ -65,7 +71,7 @@
 /* กรอบภายในที่มีข้อความและไอคอน */
 .rectangle-box1 {
     width: 100%;  /* กำหนดความกว้างของกรอบ */
-    background-color: #ffffff;
+    background-color: #E8F9FF;
     border-radius: 15px; /* ขอบโค้งมน */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาให้กรอบ */
     padding: 20px; /* ระยะห่างภายในกรอบ */
@@ -73,10 +79,10 @@
 }
 
 /* ส่วนของเนื้อหาภายในกรอบ */
-.rectangle-content {
+.rectangle-content1 {
     display: flex;
     justify-content: space-between; /* จัดกรอบข้อความและไอคอนให้ห่างกัน */
-    align-items: center; /* จัดตำแหน่งไอคอนและข้อความให้อยู่ในแนวเดียวกัน */
+    align-items: flex-start; /* จัดตำแหน่งไอคอนและข้อความให้อยู่ในแนวเดียวกัน */
 }
 
 /* ข้อความด้านซ้าย */
@@ -92,10 +98,58 @@
     color: #333;
 }
 
+/* วันที่ (ให้อยู่ในระดับเดียวกับชื่อรายการ) */
+.date {
+    font-size: 1rem;
+    color: #333;
+    margin-left: 10px; /* ระยะห่างระหว่างชื่อรายการและวันที่ */
+}
+
 .description {
     font-size: 1rem;
     color: #666;
 }
+
+/* ส่วนของวันที่ด้านขวา */
+.date-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.date {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ส่วนของวันที่ด้านขวา */
+.date-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.date {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* เพิ่มสไตล์ให้กับ "รวม" และ "0.00 บาท" */
+.bold-text {
+    font-weight: bold;
+    color: #333; /* สีดำ */
+    font-size: 1.2rem;
+}
+
+.amount-text {
+    font-weight: bold;
+    color: #333; /* สีดำ */
+    margin-left: auto; /* ทำให้ข้อความอยู่ทางขวา */
+    font-size: 1.2rem;
+}
+
 
 /* ไอคอนด้านขวา */
 .icon-right {
